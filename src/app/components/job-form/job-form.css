@@ -1,0 +1,16 @@
+  .form-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .error-message {
+    color: #d32f2f;
+    /* ładny czerwony odcień */
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    /* żeby tekst nie łamał się w wielu liniach */
+  }
+
+  

@@ -1,0 +1,36 @@
+<div class="bg-light-gray min-vh-100 py-5 d-flex flex-column align-items-center justify-content-start">
+  <h1 class="app-title text-center mb-5">Aplikacja z ofertami pracy</h1>
+
+  <div class="container">
+    <div class="row justify-content-center g-5">
+
+    
+      <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <mat-card class="card-clean w-100">
+
+          <mat-card-content>
+            <div class="mb-3">
+              <app-job-form></app-job-form>
+            </div>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+   
+      <div class="col-12 col-lg-6 d-flex justify-content-center">
+        <mat-card class="card-clean w-100">
+
+          <mat-card-content>
+            <app-job-list></app-job-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+  <div class="py-3">
+    <button mat-button color="warn" (click)="clearStorage()">Przywróć domyślne oferty</button>
+  </div>
+
+</div>

@@ -1,0 +1,33 @@
+<mat-card-title class="py-4">Dodaj ofertę</mat-card-title>
+<div class="py-3">
+  <form [formGroup]="jobForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Stanowisko</mat-label>
+        <input matInput formControlName="title" placeholder="Stanowisko" required />
+      </mat-form-field>
+    </div>
+
+    <div class="mb-3">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Firma</mat-label>
+        <input matInput formControlName="company" placeholder="Firma" required />
+      </mat-form-field>
+    </div>
+
+    <div class="mb-3">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Lokalizacja</mat-label>
+        <input matInput formControlName="location" placeholder="Lokalizacja" required />
+      </mat-form-field>
+    </div>
+
+    <div class="d-flex justify-content-end align-items-center gap-3">
+
+      <button mat-raised-button color="primary" type="button" (click)="onAddJob()">Dodaj ofertę</button>
+      <span class="error-message" *ngIf="errorMessage">{{ errorMessage }}</span>
+    </div>
+
+  </form>
+
+</div>

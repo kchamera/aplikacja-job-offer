@@ -1,0 +1,29 @@
+<div class="filter-bar d-flex align-items-center mb-3 small-filter">
+  <mat-card-title class="me-3 small-title">Lista ofert</mat-card-title>
+
+  <mat-form-field appearance="outline" class="filter-field">
+    <mat-label>Filtruj po stanowisku</mat-label>
+    <input matInput [(ngModel)]="filterText" (ngModelChange)="applyFilter()" placeholder="np. Frontend Developer" />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+
+
+<div *ngIf="filteredJobs.length === 0" class="text-center py-4 text-muted">
+  Brak ofert pracy.
+</div>
+
+<div *ngFor="let job of filteredJobs" class="job-card-wrapper">
+  <mat-card class="card-item">
+    <mat-card-header class="job-card-header">
+      <div class="job-info">
+        <mat-card-title class="job-title">{{ job.title }}</mat-card-title>
+        <mat-card-subtitle class="job-company">{{ job.company }}</mat-card-subtitle>
+      </div>
+    </mat-card-header>
+    <mat-card-content class="job-location">
+      <mat-icon class="text-muted">place</mat-icon>
+      <span>{{ job.location }}</span>
+    </mat-card-content>
+  </mat-card>
+</div>

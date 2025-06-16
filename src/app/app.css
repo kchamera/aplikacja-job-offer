@@ -1,0 +1,30 @@
+ .bg-light-gray {
+    background-color: #f3f4f6;
+  }
+
+  .app-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2f3e50;
+  }
+
+  .card-clean {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    padding: 16px;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  mat-card-title {
+    font-size: 1.25rem;
+    color: #2f3e50;
+  }
+
+  @media (max-width: 991.98px) {
+    .card-clean {
+      margin-bottom: 24px;
+      max-width: 100%;
+    }
+  }
